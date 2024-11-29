@@ -1,0 +1,9 @@
+@use '@carbon/colors';
+
+.droppable {
+  border: 2px solid transparent;
+}
+
+.isOver {
+  border-color: colors.$teal-40;
+}

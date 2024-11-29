@@ -1,0 +1,56 @@
+@use '@carbon/colors';
+@use '@carbon/layout';
+@use "@carbon/type";
+
+.container {
+  background-color: colors.$white-0;
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.loadingContainer {
+  @extend .container;
+  background-color: colors.$gray-10;
+  margin-top: 5rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.emptyStateTile {
+  width: 80%;
+  margin: 1.25rem auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.errorStateTile {
+  @extend .emptyStateTile;
+
+  .helperText {
+    margin: 0.75rem 0;
+  }
+
+  button {
+    margin-top: 0.25rem;
+  }
+}
+
+.heading {
+  @include type.type-style('heading-compact-02');
+  color: colors.$gray-100;
+}
+
+.helperText {
+  margin-top: 0.5rem;
+  @include type.type-style('body-01');
+  color: colors.$gray-90;
+}
